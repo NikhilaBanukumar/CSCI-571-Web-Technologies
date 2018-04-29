@@ -1,0 +1,62 @@
+/* Animation when details button is clicked. Loads Div2 from left to right*/   
+@keyframes myChange {
+   from    { transform:translateX(-100%); }
+    to      { transform: translateX(0%); }
+}
+
+/* Animation when details button is clicked. Loads Div2 from right to left*/
+@keyframes myChang {
+   from    { transform:translateX(100%); }
+    to      { transform: translateX(0%); }
+}
+
+.div1{
+    
+    overflow: auto;
+    width: 100%;
+}
+.tab-pane{
+  overflow-x:scroll;
+  overflow-y:scroll;
+  width:100%;
+}   
+.nav > li > a{
+        color:black;
+}
+    
+
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color:#286090;
+    color: white;    
+}
+.nav > li.active > a:hover {
+    text-decoration: none;
+    background:#286090; 
+    color:#FFF;
+}
+
+ul>li.active >a  {
+    background:#286090; color:#FFF;
+}
+
+
+/*Add animation when ng-hide class is removed from the div2 i.e., when the details button is clicked */
+div.div2.ng-hide-remove {
+        -webkit-animation:0.3s myChange ease; 
+        animation:0.5s myChange ease;         
+}
+
+/*Add animation when ng-hide class is removed from the div1 i.e., when the back button is clicked */
+div.div1.ng-hide-remove      { 
+  -webkit-animation:0.6s myChang ease; 
+  animation:0.6s myChang ease; 
+}
+
+.clickableRow {
+    cursor: pointer;
+}
+
+.gly{
+     color:yellow;
+    }
